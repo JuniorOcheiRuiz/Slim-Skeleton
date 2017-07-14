@@ -4,6 +4,11 @@ return [
         'displayErrorDetails' => true, // set to false in production
         'addContentLengthHeader' => false, // Allow the web server to send the content-length header
 
+        'routesFile' => [
+          '/api' => __DIR__ . '/../routes/api.routes.php',
+          '/' => __DIR__ . '/../routes/web.routes.php'
+        ],
+
         // Renderer settings
         'renderer' => [
             'template_path' => __DIR__ . '/../templates/',
