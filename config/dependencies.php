@@ -5,7 +5,10 @@ $container = $app->getContainer();
 
 // view
 $container['view'] = function ($c) {
-  
+  $setting = $c->settings['view'];
+  $loader = \Twig_Loader_Filesystem($setting['template_path']);
+  $view = \Twig_Environment($loader, ['cache' => $setting['cache_path']]);
+  return $view;
 };
 
 // monolog

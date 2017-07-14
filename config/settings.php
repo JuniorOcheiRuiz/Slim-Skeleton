@@ -10,8 +10,9 @@ return [
         ],
 
         // Renderer settings
-        'renderer' => [
-            'template_path' => __DIR__ . '/../templates/',
+        'view' => [
+            'template_path' => __DIR__ . '/../templates',
+            'cache_path' => __DIR__ . '/../cache/templates'
         ],
 
         // Monolog settings
